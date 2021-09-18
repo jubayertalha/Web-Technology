@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="" method="get">
+	<fieldset><legend><h1>Registration Form</h1></legend>
+		<label for="fname">First Name: </label>
+		<input type="text" id="fname" name="fname" required=""><br><hr>
+		<label for="lname">Last Name: </lable>
+		<input type="text" id="lname" name="lname" required=""><br><hr>
+		<label for="email">Email: </lable>
+		<input type="email" id="email" name="email" required=""><br><hr>
+		
+		<fieldset><legend><h1>Gender</h1></legend>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male">Male</label>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label>
+			<input type="radio" id="other" name="gender" value="other">
+			<label for="other">Other</label>
+		</fieldset><hr>
+		
+		<fieldset><legend>Date of Birth</legend>
+			<input type="datetime-local" id="dob" name="dob">
+			<label for="dob">dd mm yyyy</label>
+		</fieldset><hr>
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</fieldset>	
+</form>
+
+<form action="" method="get">
+	<fieldset><legend><h1>Login Form</h1></legend>
+		<label for="uname">User Name: </label>
+		<input type="text" id="uname" name="uname" required=""><br><br>
+		<label for="pass">Password: </lable>
+		<input type="password" id="pass" name="pass" required=""><br><hr>
+		
+		<input type="checkbox" id="remem"  name="remem" required="">
+		<label for="remem"><b>Remember Me</b></label><br><br>
+
+		<input type="submit" value="Submit">
+		<a href="">Forget Password?</a>
+	</fieldset>	
+</form>
+
+<form action="" method="get">
+	<fieldset><legend><h1>Change Password</h1></legend>
+		<label for="cpass">Current Password: </label>
+		<input type="password" id="cpass" name="cpass" required=""><br><br>
+		<label for="npass">New Password: </lable>
+		<input type="password" id="npass" name="npass" required=""><br><br>
+		<label for="rpass" style="color:red;">Retype New Password: </lable>
+		<input type="password" id="rpass" name="rpass" required=""><br><hr>
+
+		<input type="submit" value="Submit">
+	</fieldset>	
+</form>
+
+</body>
+</html>
