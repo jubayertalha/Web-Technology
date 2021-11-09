@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <style>
+            body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            h3{
+                text-align: center;
+                color: brown;
+            }
+            table{
+                width: 1000px;
+                margin-bottom: 20px;
+            }
+            td{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            #r1, #r2{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            table, th, td{
+                border: 1px solid black;
+            }
+            #btn{
+                padding: 15px;
+                border: none;
+                color: aliceblue;
+                background-color: cornflowerblue;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #btn:hover{
+                background-color: rgba(100, 148, 237, 0.7);
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Basic Algebra with JavaScript</h1>
+        <table>
+            <tr>
+                <th>Random Number 1</th>
+                <th>Random Number 2</th>
+            </tr>
+            <tr>
+                <th id="r1"></th>
+                <th id="r2"></th>
+            </tr>
+            <tr>
+                <td>Add</td>
+                <td id="add"></td>
+            </tr>
+            <tr>
+                <td>Substract</td>
+                <td id="sub"></td>
+            </tr>
+            <tr>
+                <td>Multipy</td>
+                <td id="mul"></td>
+            </tr>
+            <tr>
+                <td>Divide</td>
+                <td id="div"></td>
+            </tr>
+        </table>
+        <button id="btn">Regenerate Number</button>
+        <script>
+            math();
+            document.getElementById("btn").onclick = function() { math() };
+            function math(){
+                var r1 = Math.floor(Math.random() * 100) + 1;
+                var r2 = Math.floor(Math.random() * 100) + 1;
+                var add = r1+r2;
+                var sub = r1-r2;
+                var mul = r1*r2;
+                var div = r1/r2;
+                document.getElementById("r1").innerHTML = r1;
+                document.getElementById("r2").innerHTML = r2;
+                document.getElementById("add").innerHTML = add;
+                document.getElementById("sub").innerHTML = sub;
+                document.getElementById("mul").innerHTML = mul;
+                document.getElementById("div").innerHTML = div;
+            }
+        </script>
+    </body>
+</html>

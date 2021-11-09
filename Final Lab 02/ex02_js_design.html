@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <p id="text">Change this text of thi paragraph by "Lab 09 task 1 submitted by Your name and your Id using button click event.</p>
+        <button id="btn">Click me to change avobe text</button>
+        <script>
+            document.getElementById("btn").onclick = function() { change() };
+            function change(){
+                var text = "Submitted by Rahman, Sheikh Talha Jubayer and ID is 19-41468-3 using button click event at " + new Date().toString();
+                document.getElementById("text").innerHTML = text;
+                document.getElementById("text").style.color = "blue";
+                document.getElementById("text").style.paddingTop = "30px";
+                document.getElementById("text").style.paddingBottom = "30px";
+                document.getElementById("text").style.width = "1200px";
+                document.getElementById("text").style.textAlign = "center";
+                document.getElementById("text").style.border = "3px solid black";
+            }
+        </script>
+    </body>
+</html>
