@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <form action="" onsubmit="return validateForm()" method="post">
+            First Name: <input type="text" id="fname"> <small id="fnameerr"></small><br><br>
+            Last Name: <input type="text" id="lname"> <small id="lnameerr"></small><br><br>
+            ID: <input type="text" id="sid"> <small id="siderr"></small><br><br>
+            <input type="submit">
+        </form>
+        <script>
+            function validateForm(){
+                var fname = document.getElementById("fname").value;
+                var lname = document.getElementById("lname").value;
+                var sid = document.getElementById("sid").value;
+                var valid = true;
+                if(fname==""){
+                    document.getElementById("fnameerr").innerHTML = "First name can't be empty.";
+                    document.getElementById("fnameerr").style.color = "red";
+                    valid = false;
+                }else{
+                    document.getElementById("fnameerr").innerHTML = "Valid.";
+                    document.getElementById("fnameerr").style.color = "green";
+                }
+                if(lname==""){
+                    document.getElementById("lnameerr").innerHTML = "Last name can't be empty.";
+                    document.getElementById("lnameerr").style.color = "red";
+                    valid = false;
+                }else{
+                    document.getElementById("lnameerr").innerHTML = "Valid.";
+                    document.getElementById("lnameerr").style.color = "green";
+                }
+                if(sid==""){
+                    document.getElementById("siderr").innerHTML = "ID can't be empty.";
+                    document.getElementById("siderr").style.color = "red";
+                    valid = false;
+                }else{
+                    document.getElementById("siderr").innerHTML = "Valid.";
+                    document.getElementById("siderr").style.color = "green";
+                }
+                return valid;
+            }
+        </script>
+    </body>
+</html>

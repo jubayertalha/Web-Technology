@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <style>
+            table{
+                width: 400px;
+            }
+            table, th, td{
+                border: 1px solid black;
+            }
+            td{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="student"></table>
+        <script>
+            student();
+            function student(){
+                var text = "<tr><th>SL</th><th>Student</th></tr>"
+                var studentArray = ["Talha","Jubayer","Rahman","Hasan","Shifat","Afrida","Arni","Asha","Niloy","Mishu"];
+                for(var i=0;i<studentArray.length;i++){
+                    text += "<tr><td>"+(i+1)+"</td><td>"+studentArray[i]+"</td></tr>";
+                }
+                document.getElementById("student").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>
